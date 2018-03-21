@@ -12,11 +12,11 @@ class Record(models.Model):
         auto_now_add=True,
     )
     text = models.CharField(
-        max_length=1255,
+        max_length=255,
     )
     def __str__(self):
         return ' '.join([
-            self.date,
+            str(self.date),
             self.text,
         ])
 

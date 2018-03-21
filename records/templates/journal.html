@@ -1,0 +1,9 @@
+<h3>Journal</h3>
+
+<ul>
+    {% for record in object_list %}
+    <li class="Record">{{ record }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url "add" %}">Add</a>
+

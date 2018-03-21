@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+import records.views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', records.views.RecordsView.as_view(), name='journal'),
+    url(r'^add/$', records.views.AddRecord.as_view(), name='add'),
 ]
